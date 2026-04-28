@@ -1,0 +1,10 @@
+[package]
+name = "tui-start"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ratatui = "0.30"
+crossterm = "0.28"
+serde_json = "1.0"
+chrono = "0.4"
