@@ -17,12 +17,12 @@ A terminal-based configuration editor for DMS (Diagnostic Management System) JSO
 - **Cyberpunk-themed TUI** — neon colors, ASCII art banner, glowing borders, deep purple backgrounds
 - **Two modes** — Create new configs or edit existing ones via a file browser
 - **7-step form wizard**:
-  1. **Part Number** — validated `###-PCA######-X` format (e.g. `127-PCA000097-E`)
+  1. **Part Number** — validated `###-PCA######-X` format
   2. **Basic Info** —  programming details, card setup
   3. **Offline Stages** — with nested testcase editing (id, name, position)
   4. **Diagnostics Stages** — name, JSON file, steps, stage order
   5. **Cards** — card name, part number, type, parameters, XML, EEPROM read position
-  6. **Interactive Queries** — key/value pairs with SFP test toggle
+  6. **Interactive Queries** — key/value pairs with test toggle
   7. **Review & Save** — full JSON preview before saving
 - **Dynamic JSON manipulation** — uses `serde_json::Value` for flexible schema handling
 - **Files saved as** `./INFO_JSON/<part_number>.json`
