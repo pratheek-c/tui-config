@@ -4,7 +4,7 @@ A terminal-based configuration editor for DMS (Diagnostic Management System) JSO
 
 ```
   ╔══════════════════════════════════════════════════════════════╗
-  ║  DMS   CONFIG   CREATOR   v1.0                            ║
+  ║  CONFIG   CREATOR   v1.0                            ║
   ╚══════════════════════════════════════════════════════════════╝
    ⚡ SELECT OPERATION ⚡
 
@@ -18,7 +18,7 @@ A terminal-based configuration editor for DMS (Diagnostic Management System) JSO
 - **Two modes** — Create new configs or edit existing ones via a file browser
 - **7-step form wizard**:
   1. **Part Number** — validated `###-PCA######-X` format (e.g. `127-PCA000097-E`)
-  2. **Basic Info** — UCD, CFPGA, DEDI, T-MAMS, programming details, card setup
+  2. **Basic Info** —  programming details, card setup
   3. **Offline Stages** — with nested testcase editing (id, name, position)
   4. **Diagnostics Stages** — name, JSON file, steps, stage order
   5. **Cards** — card name, part number, type, parameters, XML, EEPROM read position
@@ -118,35 +118,6 @@ src/
 
 The generated configuration is wrapped in an `Info` object:
 
-```json
-{
-  "Info": {
-    "Offline_Stages": [
-      {
-        "Name": "...",
-        "stageOrder": "1",
-        "Tool": "...",
-        "steps": ["step1", "step2"],
-        "Testcases": [
-          { "testcaseId": "...", "testcaseName": "...", "testcasePosition": "1" }
-        ]
-      }
-    ],
-    "Programming_Reqd": false,
-    "programming_details": { ... },
-    "Card_Setup": { "json": "" },
-    "Diagnostics_Stages": [ ... ],
-    "Recovery_Stages": [],
-    "UCD": { "path": "", "address": "", "tc_series": "", "testcase_id": "" },
-    "CFPGA": { "file_name": "", "tcl_script": "" },
-    "DEDI": { "location": "", "path": "" },
-    "T-MAMS": { "workflow_version": "", "schema_version": "" },
-    "interactive_queries": [ ... ],
-    "cards": [ ... ],
-    "intruction_message": ""
-  }
-}
-```
 
 ## Dependencies
 
